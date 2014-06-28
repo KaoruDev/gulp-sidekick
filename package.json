@@ -1,13 +1,12 @@
 {
   "name": "gulp-assist",
-  "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "Tired of bouncing your node server every single time there is a change? Fret no longer! Gulp-node-sidekick watches your node files and bounces the server on change.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Kaoru Kohashigawa",
+  "license": "MIT",
   "devDependencies": {
     "gulp": "^3.8.5",
     "minimist": "^0.2.0"
