@@ -14,7 +14,7 @@ parent-dir
 
 ````
 
-Install ```gulp-node-sidekick``` next to your node directory.
+git clone ```gulp-node-sidekick``` next to your node directory.
 
 ### Fire err up
 
@@ -22,10 +22,13 @@ cd into ```gulp-node-side-kick``` dir and fire up gulp using:
   ```gulp --serverDir=my-node-project nodeFile=app.js```
 
 **Necessary flag:**
+
 ```--serverDir=my-node-project``` will tell gulp-node-sidekick where your project directory is.
 
 **Optional flag:**
+
 ```--nodeFile=app.js``` the name of your node file. By default it is ```server.js```
+___
 
 ### Bigger projects
 ```gulp-node-sidekick``` listens to all js file changes. So if you are making changes to your Front-End work, you really don't need your server to bounce. In that case you may want to separate your app files.
