@@ -3,6 +3,8 @@ gulp-node-sidekick
 
 Tired of bouncing your node server every single time there is a change? Fret no longer! Gulp-node-sidekick watches your node files and bounces the server on change.
 
+Want to add more gulp tasks? Branch it and create a specific set of gulp task per project. This is really meant to be a boiler plate =)
+
 ## Installation
 
 ````
