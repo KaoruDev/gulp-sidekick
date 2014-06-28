@@ -30,6 +30,9 @@ cd into ```gulp-node-side-kick``` dir and fire up gulp using:
 **Optional flag:**
 
 ```--nodeFile=app.js``` the name of your node file. By default it is ```server.js```
+
+
+```--debug``` will start run ```node debug server.js``` so that you may debug the server you are watching.
 ___
 
 ### Bigger projects
@@ -46,6 +49,8 @@ parent-dir
 			-server.js
 ````
 Instead of passing in just the name of the directory pass in the pathname ```--serverDir=my-node-project/app```
+
+___
 
 #### Version
 ```0.0.1``` - the Beginning =)
