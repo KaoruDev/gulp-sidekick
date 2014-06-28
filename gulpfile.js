@@ -11,7 +11,9 @@ gulp.task('server', function () {
     node.kill()
     console.log('\n Bouncing server..... \n');
   };
-  node = spawn('node', ['../' + serverDir + '/' + nodeFile], {stdio: 'inherit'});
+
+  node = spawn('node', [argv.debug? 'debug' : '', ('../' + serverDir + '/' + nodeFile)], {stdio: 'inherit'});
+
   node.on('close', function (code) {
     if (code === 8) {
       console.log('Error detected, waiting for changes...');
@@ -19,9 +21,8 @@ gulp.task('server', function () {
   });
 });
 
-gulp.task('default', function () {
+gulp.task('default', ['server'], function () {
   console.log("\n Starting up " + serverDir + '/' + nodeFile);
-  gulp.run('server');
   gulp.watch('../' + serverDir + '/*.js', ['server'])
 });
 
