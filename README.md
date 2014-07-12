@@ -7,13 +7,12 @@ Want to add more gulp tasks? Branch it and create a specific set of gulp task pe
 
 ## Setup
 
-**Node**
+**install Node**
 http://nodejs.org/download/
 
 ```node -v``` to see if you already have it installed
 
-After you clone down you will have to install the dependencies. ```npm install```
-
+After you clone down the repo you will have to install the dependencies. ```npm install```
 ___
 
 ## Installation
