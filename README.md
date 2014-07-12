@@ -5,6 +5,17 @@ Tired of bouncing your node server every single time there is a change? Fret no 
 
 Want to add more gulp tasks? Branch it and create a specific set of gulp task per project. This is really meant to be a boiler plate =)
 
+## Setup
+
+**Node**
+http://nodejs.org/download/
+
+```node -v``` to see if you already have it installed
+
+After you clone down you will have to install the dependencies. ```npm install```
+
+___
+
 ## Installation
 
 ````
