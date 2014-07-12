@@ -29,11 +29,16 @@ gulp.task('server', function () {
 });
 
 gulp.task('static', function () {
-  gulp.watch(['../' + staticDir + '/*.html'], ['html'])
+  connect.server({
+    root: staticDir,
+    livereload: true
+  });
+
+  gulp.watch(['../' + staticDir + '/*.html'], ['static:html']);
 });
 
-gulp.task('html', function () {
-  gulp.src('./*.html')
+gulp.task('static:html', function () {
+  gulp.src('../' + staticDir + '/*.html')
     .pipe(connect.reload());
 });
 
