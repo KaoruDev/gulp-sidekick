@@ -52,5 +52,21 @@ Instead of passing in just the name of the directory pass in the pathname ```--s
 
 ___
 
+### Smaller projects
+
+Say you only want to look at changes of static files in a sibling directory. ( Right now only html, but planning on implementing sass support )
+Fire up ```gulp-static```
+**Necessary flag:**
+
+```--staticDir=NameOfStaticDir``` will tell gulp which directory to look for html static files.
+
+***BUT WAIT THERE's MORE!*** you also have add this script tag to your html file you want to watch:
+
+```<script src="http://localhost:35729/livereload.js?snipver=1"></script>```
+
+Just be sure to remove it ( or not ) before you commit. This is what connects your client to the gulp task runner.
+
+___
+
 #### Version
 ```0.0.1``` - the Beginning =)
