@@ -3,8 +3,14 @@ var gulp = require('gulp'),
     argv = require('minimist')(process.argv.slice(2)),
     serverDir = argv.serverDir,
     nodeFile = argv.nodeFile || 'server.js',
+    staticDir = argv.staticDir,
     node
 ;
+
+gulp.task('default', ['server'], function () {
+  console.log("\n Starting up " + serverDir + '/' + nodeFile);
+  gulp.watch('../' + serverDir + '/*.js', ['server'])
+});
 
 gulp.task('server', function () {
   if (node) {
@@ -21,11 +27,10 @@ gulp.task('server', function () {
   });
 });
 
-gulp.task('default', ['server'], function () {
-  console.log("\n Starting up " + serverDir + '/' + nodeFile);
-  gulp.watch('../' + serverDir + '/*.js', ['server'])
+gulp.task('static', function () {
+  gulp.watch(['../' + staticDir + '/*.html'], ['html'])
 });
 
 process.on('exit', function () {
   if (node) { node.kill() }
-})
+});
