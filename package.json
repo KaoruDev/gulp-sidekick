@@ -8,8 +8,8 @@
   "author": "Kaoru Kohashigawa",
   "license": "MIT",
   "devDependencies": {
-    "connect": "^3.0.2",
     "gulp": "^3.8.5",
+    "gulp-connect": "^2.0.6",
     "minimist": "^0.2.0"
   }
 }
