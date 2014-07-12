@@ -1,4 +1,4 @@
-gulp-node-sidekick
+gulp-sidekick
 ==================
 
 Tired of bouncing your node server every single time there is a change? Fret no longer! Gulp-node-sidekick watches your node files and bounces the server on change.
