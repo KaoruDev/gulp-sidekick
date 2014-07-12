@@ -72,7 +72,9 @@ Fire up ```gulp-static```
 
 ***BUT WAIT THERE's MORE!*** you also have add this script tag to your html file you want to watch:
 
-```<script src="http://localhost:35729/livereload.js?snipver=1"></script>```
+```
+<script src="http://localhost:35729/livereload.js?snipver=1"></script>
+```
 
 Just be sure to remove it ( or not ) before you commit. This is what connects your client to the gulp task runner.
 
