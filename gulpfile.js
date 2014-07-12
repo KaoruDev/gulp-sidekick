@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     spawn = require('child_process').spawn,
+    connect = require('gulp-connect'),
     argv = require('minimist')(process.argv.slice(2)),
     serverDir = argv.serverDir,
     nodeFile = argv.nodeFile || 'server.js',
@@ -29,6 +30,11 @@ gulp.task('server', function () {
 
 gulp.task('static', function () {
   gulp.watch(['../' + staticDir + '/*.html'], ['html'])
+});
+
+gulp.task('html', function () {
+  gulp.src('./*.html')
+    .pipe(connect.reload());
 });
 
 process.on('exit', function () {
