@@ -12,7 +12,10 @@ http://nodejs.org/download/
 
 ```node -v``` to see if you already have it installed
 
-After you clone down the repo you will have to install the dependencies. ```npm install```
+Next install gulp
+```
+sudo npm install -g gulp
+```
 ___
 
 ## Installation
@@ -26,7 +29,12 @@ parent-dir
 
 ````
 
-git clone ```gulp-node-sidekick``` next to your node directory.
+git clone ```gulp-node-sidekick``` next to your project directory.
+
+Once you have cloned down this repo you will have to install the dependencies of ```gulp-watch```.
+```
+npm install
+```
 
 ### Fire err up
 
@@ -64,11 +72,11 @@ ___
 
 ### Smaller projects
 
-Say you only want to look at changes of static files in a sibling directory. ( Right now only html, but planning on implementing sass support )
-Fire up ```gulp-static```
+Say you only want to look at changes of static files in a sibling directory. ( Currently only js/css/html )
+Fire up ```gulp --staticDir=my-project```
 **Necessary flag:**
 
-```--staticDir=NameOfStaticDir``` will tell gulp which directory to look for html static files.
+```--staticDir=NameOfStaticDir``` will tell gulp-sidekick which directory to watch for static files changes.
 
 ***BUT WAIT THERE's MORE!*** you also have add this script tag to your html file you want to watch:
 
@@ -76,9 +84,17 @@ Fire up ```gulp-static```
 <script src="http://localhost:35729/livereload.js?snipver=1"></script>
 ```
 
-Just be sure to remove it ( or not ) before you commit. This is what connects your client to the gulp task runner.
+Just be sure to remove it ( or not ) before you commit. This is what connects your client to livereload.
 
 ___
 
+
+### TODOS
+
+- gulp-watch plugin to watch new/deleted files
+- rails watching capabilities
+- add sass compiling
+- minification/uglifier for production
+
 #### Version
-```0.0.1``` - the Beginning =)
+```0.0.2``` - the Beginning =)
