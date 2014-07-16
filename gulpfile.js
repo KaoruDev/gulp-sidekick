@@ -8,9 +8,15 @@ var gulp = require('gulp'),
     node
 ;
 
-gulp.task('default', ['server'], function () {
-  console.log("\n Starting up " + serverDir + '/' + nodeFile);
-  gulp.watch('../' + serverDir + '/*.js', ['server'])
+gulp.task('default', function () {
+  if (serverDir) {
+    console.log("\n Starting up " + serverDir + '/' + nodeFile);
+    gulp.start('server');
+    gulp.watch('../' + serverDir + '/*.js', ['server']);
+  } else if (staticDir) {
+    console.log("\n Watching static files in " + staticDir + '/' );
+    gulp.start('static');
+  }
 });
 
 gulp.task('server', function () {
@@ -34,9 +40,9 @@ gulp.task('static', function () {
     livereload: true
   });
 
-  gulp.watch(['../' + staticDir + '/*.html'], ['static:html']);
-  gulp.watch(['../' + staticDir + '/*.css'], ['static:html']);
-  gulp.watch(['../' + staticDir + '/*.js'], ['static:html']);
+  gulp.watch(['../' + staticDir + '/**/*.html'], ['static:html']);
+  gulp.watch(['../' + staticDir + '/**/*.css'], ['static:html']);
+  gulp.watch(['../' + staticDir + '/**/*.js'], ['static:html']);
 });
 
 gulp.task('static:html', function () {
