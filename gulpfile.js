@@ -35,6 +35,8 @@ gulp.task('static', function () {
   });
 
   gulp.watch(['../' + staticDir + '/*.html'], ['static:html']);
+  gulp.watch(['../' + staticDir + '/*.css'], ['static:html']);
+  gulp.watch(['../' + staticDir + '/*.js'], ['static:html']);
 });
 
 gulp.task('static:html', function () {
