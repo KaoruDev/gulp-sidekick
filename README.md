@@ -74,6 +74,7 @@ ___
 
 Say you only want to look at changes of static files in a sibling directory. ( Currently only js/css/html )
 Fire up ```gulp --staticDir=my-project```
+
 **Necessary flag:**
 
 ```--staticDir=NameOfStaticDir``` will tell gulp-sidekick which directory to watch for static files changes.
