@@ -5,6 +5,22 @@ Tired of bouncing your node server every single time there is a change? Fret no 
 
 Want to add more gulp tasks? Branch it and create a specific set of gulp task per project. This is really meant to be a boiler plate =)
 
+
+## Dependency issue
+
+If you are encountering the following error while trying to watch a static directory:
+````
+TypeError: Object function createServer() {
+  function app(req, res, next){ app.handle(req, res, next); }
+  merge(app, proto);
+  merge(app, EventEmitter.prototype);
+  app.route = '/';
+  app.stack = [];
+  return app;
+} has no method 'static'
+````
+This [stackoverflow](http://stackoverflow.com/questions/24336994/nodejs-connect-usage-of-built-in-modules-method-not-found) should fix it. Though I haven't tried it yet and since it's a problem with a dependency I'm not sure if I want to fix it in the repo. I'll try it out this weekend, so yeah this is kind of a TODO.
+
 ## Setup
 
 **install Node**
